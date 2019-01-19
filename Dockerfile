@@ -11,4 +11,4 @@ RUN wget -nv -O- https://download.calibre-ebook.com/linux-installer.py | python 
 
 WORKDIR /ebook
 
-ENTRYPOINT ["ebook-convert"]
+# ENTRYPOINT ["ebook-convert"]
