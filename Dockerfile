@@ -9,6 +9,10 @@ RUN apt-get update && apt-get install -y wget python xz-utils xdg-utils \
 
 RUN wget -nv -O- https://download.calibre-ebook.com/linux-installer.py | python -c "import sys; main=lambda:sys.stderr.write('Download failed\n'); exec(sys.stdin.read()); main()"
 
+COPY convert.sh /
+
 WORKDIR /ebook
 
-# ENTRYPOINT ["ebook-convert"]
+ENV MONITOR_DIR="/books"
+
+ENTRYPOINT ["/convert.sh"]

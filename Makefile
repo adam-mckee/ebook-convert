@@ -1,5 +1,5 @@
 # SETUP
-APP_NAME=gaborsomogyi/ebook-convert
+APP_NAME=larrycai/ebook-convert
 
 # PARAMETERS
 SOURCE?=epub
